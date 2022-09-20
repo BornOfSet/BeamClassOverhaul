@@ -8,3 +8,11 @@ Weapons that are not cooling are given a fire command after the turret had rotat
 BeamLifetime doesn't make sense here.
 Basically , it's not handled in the engine, but in lua. Thus I changed the code and for now the game ignores this field. Originally it was used to define the lifetime of beam. Everytime after the OnFire has been triggered, the game spawns a beam and holds it for BeamLifetime seconds (Probably) , and then destroy it. Take a look of the  Satellite , You know what I mean .
 BeamCollisionDelay ibid. Originally, the higher its value, the less damage it deals per second, which means the lower the resolution.
+
+
+
+NEED-TO-KNOW
+
+In the end, all the results of my research about this overhaul are refined in AdaptiveLaser_2 (Weapon class).
+The unit that uses this weapon is CybranLaserTank_2, and the name is Beast EX. 
+Other weapons and units are backups produced in the process, you can refer to them to learn something more, but they are not important, all you are looking for is AdaptiveLaser_2
